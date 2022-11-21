@@ -1,0 +1,23 @@
+<h1>Ver compras</h1>
+<table class="table table-success">
+    <thead>
+        <tr>
+            <th>idPedido</th>
+            <th>idUsuario</th>
+            <th>fechaPedido</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let com of compra">
+            <td>{{com.idPedido}}</td>
+            <td>{{com.idUsuario}}</td>
+            <td>{{com.fechaPedido}}</td>
+        </tr>
+    </tbody>
+</table>
+<button class="btn btn-success" [routerLink]="['/pedido']">
+    Hacer pedido
+ </button>
+<button class="btn btn-warning" [routerLink]="['/perfil']">
+    Volver atras
+</button>

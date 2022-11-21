@@ -1,0 +1,32 @@
+<table class="table table-info">
+    <thead>
+        <tr>
+            <th>Idcubo</th>
+            <th>nombre</th>
+            <th>modelo</th>
+            <th>marca</th>
+            <th>color</th>
+            <th>imagen</th>
+            <th>precio</th>
+            <th>valoracion</th>
+            <th>Hacer pedido</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let cub of cubos">
+            <td #pedido name="pedido">{{cub.idCubo}}</td>
+            <td>{{cub.nombre}}</td>
+            <td>{{cub.modelo}}</td>
+            <td>{{cub.marca}}</td>
+            <td>{{cub.color}}</td>
+            <td><img src="{{cub.imagen}}" style="width: 100px;"/></td>
+            <td>{{cub.precio}}</td>
+            <td>{{cub.valoracion}}</td>
+            <td>
+                <button value="{{cub.idCubo}}" class="btn btn-success" (click)="hacerPeido()" #pedidoboton name="pedidoboton">
+                    Hacer pedido
+                 </button>
+            </td>
+        </tr>
+    </tbody>
+</table>
